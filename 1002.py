@@ -25,3 +25,4 @@ for i in range(num):
     print(answer[i])
     
     #123
+    #승훈 ㅎㅇ
