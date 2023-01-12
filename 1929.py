@@ -1,25 +1,24 @@
 import sys
-temp = []
-index = 0
-che = 2
-a, b = map(int, sys.stdin.readline().rstrip().split())
 
-num = []
-
-for i in range(2, b):
-    num.append(i)
-
-while True:
-    while True:
-        if num[i] % che == 0:
-            num.pop(i)
-            if i < len(num):
-                i += 1
-    che += 1
-    if che == b:
-        break
+start, end = map(int, sys.stdin.readline().rstrip().split())
             
+num_list = [0]*(end+1)
 
+num_list[0] = num_list[1] = 1
 
-for i in temp:
-    print(i)
+for i in range(2, int(end**0.5)+1, 1):
+    if num_list[i] == 0:
+        for j in range(i*2, len(num_list), i):
+            num_list[j] = 1
+            
+            
+for i in range(start, len(num_list)):
+    if num_list[i] == 0:
+        print(i)
+
+# f = open('나의 소수.txt', 'w')
+# for i in range(start, len(num_list)):
+#     if num_list[i] == 0:
+#         f.write(str(i)+" ")
+# f.close
+# print("finish")
