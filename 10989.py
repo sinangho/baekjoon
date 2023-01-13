@@ -12,4 +12,3 @@ for i in range(1, len(numberList)):
     if numberList[i] != 0:
         for j in range(numberList[i]):
             print(i)
-    
