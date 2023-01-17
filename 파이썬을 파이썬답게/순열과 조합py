@@ -1,0 +1,8 @@
+import itertools
+
+def solution(mylist):
+    answer = [[]]
+    
+    answer = list(itertools.permutations(sorted(mylist), len(mylist)))
+    
+    return answer
