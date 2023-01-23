@@ -15,10 +15,10 @@ while index != X:
     line+=1
     max+=1
     start = index+1
-    for i in range(max):
-        index += 1
-        if index == X:
-            break
+    index += max
+    
+    if index >= X:
+        break
 
 x좌표 = max-1-(X-start)
 y좌표 = max-1-x좌표
