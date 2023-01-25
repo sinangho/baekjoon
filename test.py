@@ -1,30 +1,12 @@
-kkk = []
-while True :
-    a = input()
-    stack = []
+N, K = map(int,input().split())
+ans= []
+arr = [i for i in range(1,N+1)] 
+num = 0
+for i in range(N):
+    num+=(K-1)
+    if num >= len(arr):
+        num %= len(arr)
+    ans.append(str(arr[num]))
+    arr.pop(num)
 
-    if a == "." :
-        break
-
-    for i in a :
-        if i == '[' or i == '(' :
-            stack.append(i)
-        elif i == ']' :
-            if len(stack) != 0 and stack[-1] == '[' :
-                stack.pop() # 맞으면 지워서 stack을 비워줌 0 = yes
-            else : 
-                stack.append(']')
-                break
-        elif i == ')' :
-            if len(stack) != 0 and stack[-1] == '(' :
-                stack.pop()
-            else :
-                stack.append(')')
-                break
-    if len(stack) == 0 :
-        kkk.append('yes')
-    else :
-        kkk.append('no')
-        
-for i in kkk:
-    print(i)
+print("<",', '.join(ans),">", sep="")
