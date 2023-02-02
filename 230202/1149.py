@@ -1,7 +1,7 @@
 import sys 
 
 N = int(sys.stdin.readline().rstrip())
-RGB = [[0]*3]*(N+1)
+RGB = [[0 for j in range(3)] for i in range(N+1)]
 cost = [0]*3
 
 for i in range(1,N+1):
