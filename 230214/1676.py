@@ -16,3 +16,4 @@ for i in range(len(str_num)-1, -1, -1):
     else:
         print(cnt)
         break
+    # 
