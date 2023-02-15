@@ -19,3 +19,4 @@ for i in info:
 
 for i in rank:
     print(i, end=" ")
+
