@@ -4,7 +4,6 @@ N, M = map(int, sys.stdin.readline().rstrip().split())
 tree = list(map(int, sys.stdin.readline().rstrip().split()))
 
 start, end = 0, max(tree)
-answer=0
 
 while start <= end:
     
