@@ -11,4 +11,3 @@ def hanoi(N, From, To):
         
 print(2**N - 1)
 hanoi(N,1,3)
-        
