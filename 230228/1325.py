@@ -33,13 +33,9 @@ for i in range(1, N+1):
     result = BFS(i)
     if result > max:
         answer = [i]
-        max = answer
-    elif answer == max:
+        max = result
+    elif result == max:
         answer.append(i)
         
 for i in answer:
-    print(i, end=" ")5 4
-3 1
-3 2
-4 3
-5 3
+    print(i, end=" ")
